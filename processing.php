@@ -1,0 +1,14 @@
+<?php
+if(isset($_POST['sb']))
+{
+	$name=$_POST["nm"];
+	$email=$_POST["em"];
+	$password=$_POST["ps"];
+	$file=fopen("info.txt","w");
+	fwrite($file,$name);
+	fwrite($file,$email);
+	fwrite($file,$password);
+	fclose($file);
+	header("location:msg.html");
+}
+?>
